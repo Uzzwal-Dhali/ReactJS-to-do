@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+body {
+  height: 100vh;
+  background: rgb(11, 32, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchrt MS", Arial, sans-serif;
+  #root {
+    width: 100%;
+    padding: 1.3em;
+    .app {
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.05) 0 0 0 1px;
+      border-radius: 7px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .list_header {
+        color: rgba(0, 0, 0, 0.65);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .buttons_container {
+          display: flex;
+          gap: 0.15em;
+          button {
+            background: rgba(0, 0, 0, 0.15);
+            color: rgba(0, 0, 0, 0.55);
+            font-size: 0.65em;
+            font-weight: 600;
+            padding: 0.5em 0.75em 0.55em;
+            border-radius: 0.4em;
+            cursor: pointer;
+            transition: 0.5s;
+            border: none;
+            text-transform: uppercase;
+          }
+          .create:hover {
+            background: rgb(0, 180, 151);
+            color: white;
+          }
+          .signout:hover {
+            background: rgb(169, 67, 158);
+            color: white;
+          }
+        }
+      }
+      /* List Item */
+      .list_item {
+
+      }
+    }
+  }
+}
