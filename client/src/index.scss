@@ -11,7 +11,7 @@ h1 {
 
 body {
   height: 100vh;
-  background: rgb(11, 32, 54);
+  background: rgba(228, 226, 184, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,17 +23,18 @@ body {
       background: white;
       box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.05) 0 0 0 1px;
       border-radius: 7px;
-      padding: 20px;
       display: flex;
       flex-direction: column;
       width: 100%;
+      min-height: 90vh;
       .list_header {
         color: rgba(0, 0, 0, 0.65);
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 10px;
+        padding: 25px 25px 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         .buttons_container {
           display: flex;
           gap: 0.15em;
@@ -49,16 +50,16 @@ body {
             padding: 0.7em 1em;
             border-radius: 0.4em;
             cursor: pointer;
-            transition: 0.5s;
+            transition: background 0.5s ease-in;
             border: none;
             text-transform: uppercase;
             line-height: 1;
           }
           .create {
-            background: rgba(37, 159, 138, 0.6);
+            background: rgba(37, 159, 138, 0.7);
           }
           .signout {
-            background: rgba(230, 81, 105, 0.6);
+            background: rgba(230, 81, 105, 0.7);
           }
           .create:hover {
             background: rgb(37, 159, 138);
@@ -73,6 +74,7 @@ body {
         list-style: none;
         display: flex;
         justify-content: space-between;
+        padding: 15px 25px 25px;
         .info_container {
           display: flex;
           align-items: center;
@@ -104,7 +106,7 @@ body {
             padding: 0.25em 0.5em;
             font-size: 0.75em;
             cursor: pointer;
-            transition: 0.5s;
+            transition: all 0.5s ease-in;
           }
           .edit {
             color: rgba(37, 159, 138, 0.8);
@@ -119,6 +121,70 @@ body {
           .delete:hover {
             color: rgb(230, 81, 105);
             transform: scale(1.5);
+          }
+        }
+      }
+      /* Styles for Modal */
+      .overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s ease-in;
+        .modal {
+          min-width: 330px;
+          background-color: white;
+          box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+          padding: 25px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 1.3em;
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .close {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              svg {
+                fill: rgba(230, 81, 105, 0.7);
+                transition: 0.5s ease-in;
+              }
+              svg:hover {
+                fill: rgba(230, 81, 105, 1)
+              }
+            }
+          }
+          .body {
+            form {
+              display: flex;
+              flex-direction: column;
+              gap: 0.75em;
+              label {
+                font-size: 0.75em;
+                color: rgba(0, 0, 0, 0.45);
+              }
+              input {
+                display: flex;
+                width: 100%;
+                border: 1.5px solid rgb(230, 232, 236);
+                border-radius: 0.5em;
+                padding: 0.5em 0.75em;
+              }
+              input[type=submit] {
+                width: max-content;
+              }
+            }
           }
         }
       }
