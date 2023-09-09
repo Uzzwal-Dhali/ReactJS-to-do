@@ -8,8 +8,8 @@ const ListHeader = ({ listName }) => {
     <div className="list_header">
       <h1>{ listName }</h1>
       <div className="buttons_container">
-        <button className="create">Add New</button>
-        <button className="signout" onClick="{signOut}">Sgnout</button>
+        <div className="button create">Add New</div>
+        <div className="button signout" onClick="{signOut}">Sgnout</div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ body {
       background: white;
       box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.05) 0 0 0 1px;
       border-radius: 7px;
-      padding: 15px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -33,34 +33,94 @@ body {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        margin-bottom: 10px;
         .buttons_container {
           display: flex;
           gap: 0.15em;
-          button {
+          .button {
+            font-family: "Raleway", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: rgba(0, 0, 0, 0.15);
-            color: rgba(0, 0, 0, 0.55);
+            color: white;
             font-size: 0.65em;
-            font-weight: 600;
-            padding: 0.5em 0.75em 0.55em;
+            font-weight: 700;
+            padding: 0.7em 1em;
             border-radius: 0.4em;
             cursor: pointer;
             transition: 0.5s;
             border: none;
             text-transform: uppercase;
+            line-height: 1;
+          }
+          .create {
+            background: rgba(37, 159, 138, 0.6);
+          }
+          .signout {
+            background: rgba(230, 81, 105, 0.6);
           }
           .create:hover {
-            background: rgb(0, 180, 151);
-            color: white;
+            background: rgb(37, 159, 138);
           }
           .signout:hover {
-            background: rgb(169, 67, 158);
-            color: white;
+            background: rgb(230, 81, 105);
           }
         }
       }
       /* List Item */
       .list_item {
-
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        .info_container {
+          display: flex;
+          align-items: center;
+          gap: 0.25em;
+          svg {
+            path {
+              fill:none;
+              stroke:#000;
+              stroke-miterlimit:10;
+              stroke-width:24px
+            }
+          }
+          .title {
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+        .buttons_container {
+          display: flex;
+          gap: 0.2em;
+          .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            outline: none;
+            color: rgba(0, 0, 0, 0.45);
+            background: none;
+            border-radius: 0.3em;
+            padding: 0.25em 0.5em;
+            font-size: 0.75em;
+            cursor: pointer;
+            transition: 0.5s;
+          }
+          .edit {
+            color: rgba(37, 159, 138, 0.8);
+          }
+          .edit:hover {
+            color: rgb(37, 159, 138);
+            transform: scale(1.5);
+          }
+          .delete {
+            color: rgba(230, 81, 105, 0.8);
+          }
+          .delete:hover {
+            color: rgb(230, 81, 105);
+            transform: scale(1.5);
+          }
+        }
       }
     }
   }
