@@ -55,6 +55,7 @@ const Modal = ({ option, setShowModal }) => {
                 required
                 type="range"
                 id="range"
+                className='progress_bar'
                 min="0"
                 max="100"
                 name="progress"

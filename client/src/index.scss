@@ -151,6 +151,10 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            .title {
+              font-size: 1em;
+              color: rgba(0, 0, 0, 0.5);
+            }
             .close {
               cursor: pointer;
               display: flex;
@@ -170,10 +174,6 @@ body {
               display: flex;
               flex-direction: column;
               gap: 0.75em;
-              label {
-                font-size: 0.75em;
-                color: rgba(0, 0, 0, 0.45);
-              }
               input {
                 display: flex;
                 width: 100%;
@@ -181,8 +181,53 @@ body {
                 border-radius: 0.5em;
                 padding: 0.5em 0.75em;
               }
+              .input_group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6em;
+                label {
+                  font-size: 0.85em;
+                  color: rgba(0, 0, 0, 0.45);
+                }
+                .progress_bar {
+                  appearance: none;
+                  width: 100%;
+                  height: 1px;
+                  padding: 0;
+                  background: rgba(37, 159, 138, 0.7);
+                  outline: none;
+                  opacity: 0.7;
+                  -webkit-transition: .2s;
+                  transition: opacity .2s;
+                }
+                .progress_bar::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 5px;
+                  height: 15px;
+                  background: #04AA6D;
+                  cursor: pointer;
+                }
+
+                .progress_bar::-moz-range-thumb {
+                  width: 5px;
+                  height: 15px;
+                  background: #04AA6D;
+                  cursor: pointer;
+                }
+              }
+
               input[type=submit] {
+                cursor: pointer;
                 width: max-content;
+                background: rgba(37, 159, 138, 0.7);
+                color: whitesmoke;
+                font-weight: 500;
+                transition: background 0.5s ease-in;
+              }
+
+              input[type=submit]:hover {
+                background: rgba(37, 159, 138, 1);
               }
             }
           }
