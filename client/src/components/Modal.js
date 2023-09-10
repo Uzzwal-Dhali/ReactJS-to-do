@@ -50,16 +50,19 @@ const Modal = ({ option, setShowModal }) => {
             />
 
             <div className="input_group">
-              <label htmlFor="range">Select current progress</label>
+              <div className='label'>
+                <label htmlFor="range">Select current progress</label>
+                <div className='range'>{data.progress ? data.progress : 0}</div>
+              </div>
               <input
                 required
                 type="range"
                 id="range"
                 className='progress_bar'
                 min="0"
-                max="100"
+                max="10"
                 name="progress"
-                value={data.progress}
+                value={data.progress ? data.progress : 0}
                 onChange={handleChange}
               />
             </div>
